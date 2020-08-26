@@ -1,0 +1,138 @@
+@charset "utf-8";
+*{
+	margin:0;
+	padding:0;
+}
+li{
+	list-style:none;
+	}
+a{
+	text-decoration:none;
+	}
+img{
+	vertical-align:top;
+}
+$size:29px;
+$zero:0;
+$style:auto;
+$size1:38px;
+$width:1200px;
+#top-first{
+	height:$size;
+	width:1276px;
+	background-color:#f7f7f7;
+	margin:$zero $style;
+	border-bottom:1px solid #ddd;
+}
+#top-first1{
+	height:$size;
+	width:$width;
+	margin:$zero $style;
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+}
+#top-left{
+	height:$size;
+	line-height:$size;
+	font-size: 12px;
+	color:#666;
+}
+#top-right{
+	height:$size;
+	line-height:$size;
+	font-size: 12px;
+	color:#666;
+	span{
+		color:#cecece;
+		margin:0 10px;
+	}
+}
+#top-right a:hover{
+	color:#ff8800;
+}
+.second-logo{
+	height:115px;
+	width:1276px;
+	background-color:#fff ;
+	line-height: center;
+	
+}
+.second-logo1{
+	height:115px;
+	width:$width;
+	margin:0 auto;
+	line-height: center;
+	a{
+	img{
+		height:59px;
+		margin-left:20px;
+		margin-top:19px;
+		float: left;
+	}
+	}
+	
+}
+.search{
+	float: left;
+	width:610px;
+	height:38px;
+	border:1px solid #37ab40;
+	margin: 34px 0 0 124px;
+	background: url(../img/jingling.png) 10px -338px no-repeat;
+	font-size: 12px;
+	color:#666;
+	
+}
+.search input:nth-child(1){
+	height:34px;
+	width:470px;
+	border: 0px;
+	margin: 2px 0 0 36px;
+	outline: none;
+	font-size: 12px;
+	color: #737272;
+	font-family: 'Microsoft Yahei';
+} 
+
+.search input:nth-child(2){
+	width: 100px;
+	height: 38px;
+	background-color: #37ab40;
+	border: 0px;
+	font-size: 14px;
+	color: #fff;
+	font-family: 'Microsoft Yahei';
+	outline: none;
+	cursor: pointer;
+	
+} 
+.goCart{
+	height:40px;
+	width:200px;
+	float:right;
+	margin-top:34px;
+	a{
+		width: 158px;
+		height: 38px;
+		line-height: 38px;
+		border: 1px solid #dddddd;
+		display: block;
+		background: url(../img/jingling.png) 13px -300px no-repeat;
+		font-size: 14px;
+		color: #37ab40;
+		text-indent: 56px;
+		float: left;
+	}
+}
+.goods-count{
+	float:right;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #ff8800;
+}

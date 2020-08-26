@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<link rel="stylesheet" href="css/header1.css">
+		<link rel="stylesheet" href="css/footer.css">
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			li{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+			}
+			.lang-line{
+				border-bottom: 2px solid #39A93E;
+			}
+			.nav-top{
+				height:40px;
+				width:1200px;
+				margin:0 auto;
+			}
+			.nav-left{
+				height:40px;
+				width:200px;
+				float: left;
+				background-color: #37AB40;
+			}
+			.nav-left h1{
+				font-size:14px;
+				color:#fff;
+				line-height: 40px;
+				margin-left:53px;
+				font-weight: 400;
+				/* float: left; */
+				
+			}
+			.nav-left em{
+				background: url(img/jingling.png)100px  no-repeat;
+				height:40px;
+				width:40px;
+				/* float: right; */
+			}
+			.nav-top ul{
+				float: left;
+				height:40px;
+				/* display: none; */
+			}
+			.nav-top ul li{
+				height:40px;
+				/* width:30px; */
+				float: left;
+				line-height: 40px;
+				margin:0 15px;
+				font-size: 14px;
+				color:#666;
+			}
+			.nav-top ul li:hover{
+				color:#ff8800;
+			}
+			.nav-top ul span{
+				float: left;
+				line-height: 40px;
+				font-size: 14px;
+				color:#666;
+			}
+			.nav-top ol{
+				display: none;
+				position: absolute;
+				z-index: 2;
+				background-color: white;
+			}
+			.nav-left:hover ol{
+				display: block;	
+			}
+	
+			.nav-left li:hover a{
+				color:orange;	
+			}
+			.nav-top ol li{
+				height:44px;
+				width:198px;
+				text-align: center;
+				line-height: 44px;
+				background-color: #fff;
+				border:1px solid  #eee ;
+				border-top:none;
+				
+				
+			}
+			.nav-top ol li:nth-child(1){
+				background: url(img/jingling.png) 28px 0px no-repeat;
+			}
+			.nav-top ol li:nth-child(2){
+				background: url(img/jingling.png) 28px -44px no-repeat;
+			}
+			.nav-top ol li:nth-child(3){
+				background: url(img/jingling.png) 28px -88px no-repeat;
+			}
+			.nav-top ol li:nth-child(4){
+				background: url(img/jingling.png) 28px -132px no-repeat;
+			}
+			.nav-top ol li:nth-child(5){
+				background: url(img/jingling.png) 28px -176px no-repeat;
+			}
+			.nav-top ol li:nth-child(6){
+				background: url(img/jingling.png) 28px -220px no-repeat;	
+			}
+		.list-name{
+			height:40px;
+			width:1200px;
+			margin:0 auto;
+			font-size: 12px;
+			line-height: 40px;
+			
+			}
+			.list-name a{
+			color:green;	
+			}
+			
+			.list-name a:hover{
+				color:orange
+			}
+			
+			.good-data{
+				height:400px;
+				width:1200px;
+				margin:0 auto;
+				border:1px solid #ededed;
+				position: relative;
+			}
+			.good-img{
+				height:350px;
+				width:350px;
+				margin:24px 0 0 24px;
+				float: left;
+				
+			}
+				
+			.good-right{
+				height:350px;
+				width:730px;
+				margin:24px 24px 0 0 ;
+				float: right;
+			}	
+			.goods-name{
+				height:24px;
+				font-size:24px;
+				line-height: 24px;
+				font-weight: 400;
+			}	
+			.good-right p{
+				color:#666;
+				line-height: 40px;
+			}
+			.good-price{
+				height:72px;
+				background-color:#fff5f5;
+				line-height: 72px;
+			}
+			.good-price span:nth-child(1){
+				font-size: 20px;
+				color:#ff3e3e;
+				float: left;
+				margin-left:15px;
+			}
+			.goods-pr{
+				font-size: 36px;
+				padding-left: 10px;
+				color:#ff3e3e;
+				float: left;
+			}
+			.good-price span:nth-child(3){
+				font-size: 16px;
+				margin-left:100px;
+				color:#666;
+			}
+			.good-num{
+				height:52px;
+				margin-top: 19px;
+				width:730px;
+			}
+			.good-num span{
+				float: left;
+				height:52px;
+				width:72px;
+				line-height: 52px;
+			}
+			.good-numadd{
+				width:74px;
+				height:50px;
+				border: 1px solid #ddd;
+				float: left;
+			}
+			.num-show{
+				width:49px;
+				height:50px;
+				text-align: center;
+				line-height: 50px;
+				outline: none;
+				border:none;
+				font-size: 14px;
+				color:#666;
+				float: left;
+			}
+			.add{
+				width:25px;
+				line-height: 21px;
+				text-align: center;
+				/* border-left: 1px solid #ddd; */
+				/* border-bottom: 1px sloid #ddd; */
+				color:#666;
+				font-size: 14px;
+				float: right;
+			}
+			.count{
+				width:25px;
+				line-height: 21px;
+				text-align: center;
+				float: right;
+				float: right;
+			}
+			.else-class{
+				height:40px;
+			}
+			.else-class p{
+				line-height: 40px;
+				color:#666;
+			}
+			.total{
+				height:50px;
+				line-height: 35px;
+				margin-top:25px;
+				/* color:red; */
+			}
+			
+			.total em{
+				color:red;
+			}
+			.total span:nth-child(3){
+				color:red;
+			}
+			
+			
+			.operate{
+				height:40px;
+				margin-top: 35px;
+				position: relative;
+			}
+			 
+			.add-cart{
+				background-color: red;
+				color:#fff;
+				margin-left:10px;
+				position: relative;
+				height:38px;
+				width:178px;
+				border: 1px solid red;
+				display: inline-block;
+				line-height: 38px;
+				text-align: center;
+			}
+			.tuijian{
+				height:300px;
+				width:1200px;
+				margin:0 auto;
+				margin-top:30px;
+			}
+			.img-left{
+				border:1px solid #ededed;
+				border-top:2px solid #37AB40 ;
+				padding-bottom: 10px;
+				height:300px;
+				width:200px;
+				float: left;
+			}
+			.img-left h3{
+				height:33px;
+				line-height: 33px;
+				background-color: #fcfcfc;
+				border-bottom: 1px solid #ededed;
+				font-size: 14px;
+				font-weight: 400;
+				text-indent: 10px;
+			}
+			.img-right{
+				width:980px;
+				float: right;
+			}
+			
+			.detail{
+				height:35px;
+				border-bottom: 1px solid #008000;
+			}
+			.detail li{
+				float: left;
+				height:16px;
+				padding:10px 20px;
+			}
+			.detail li:active{
+				border-top: 1px solid #37AB40;
+				position: relative;
+				background-color: #fff;
+				border-left: 1px solid #37AB40;
+				border-right: 1px solid #37AB40;
+				top:-1px ;
+				height:16px;
+			}
+			.tab-content span{
+				margin-top:10px;
+			}
+			
+		/* 放大镜的css	 */
+		#small-box{
+			height: 180px;
+			width:180px;
+			background-image: url(img/125.jpg) ;
+			background-size: 200px 200px;
+			position: absolute;
+			border: 1px solid #37AB40;
+		}
+		#big-box{
+			height: 400px;
+			width: 400px;
+			background-image: url(img/125.jpg) ;
+			background-size: 800px 800px;
+			position: absolute;
+			top: 50px;
+			left: 400px;
+			display: none;
+			z-index: 10;
+		}
+		#mask{
+			height: 100px;
+			width: 100px;
+			background-color: red;
+			opacity: 0.3;
+			position: absolute;
+			display: none;
+			cursor: move;
+		}	
+		</style>
+	</head>
+	<body>
+		<header>
+		</header>
+		<section>
+			<div class="lang-line">
+			<div class="nav-top">
+				<div class="nav-left">
+					<h1>全部商品分类</h1>
+					<em></em>
+					<ol>
+						<li><a href="">新鲜水果</a></li>
+						<li><a href="">海鲜水产</a></li>
+						<li><a href="">猪牛羊肉</a></li>
+						<li><a href="">禽类蛋品</a></li>
+						<li><a href="">新鲜蔬菜</a></li>
+						<li><a href="">速冻食品</a></li>
+					</ol>
+					
+				</div>
+				<ul>
+					<li>首页</li>
+					<span>|</span>
+					<li>手机生鲜</li>
+					<span>|</span>
+					<li>抽奖</li>
+					
+				</ul>
+			</div>
+			</div>
+			<!-- 列表 -->
+			<div class="list-name">
+				<a href="">全部分类</a>
+				<sapn>></sapn>
+				<a href="">海鲜产品</a>
+				<span>></span>
+				<a href="">商品详情</a>
+			</div>
+		<!-- 商品的详情 -->
+		<div class="good-data">
+			<!-- <img src="http://52.83.143.113:8888/group1/M00/00/01/rBAAlV5Gi-WAQegzAAAjjiYTEkw1557358" alt=""> -->
+			<div class="bigbox" id="big-box"></div>
+			
+			<div class="good-img">
+				<div class="smallbox" id="small-box">
+					<div class="mask" id="mask"></div>
+				</div>
+			</div>
+			<div class="good-right">
+				<h3 class="goods-name">草莓500g</h3>
+				<p>简介</p>
+				<div class="good-price">
+					<span>￥</span>
+					<h2 class="goods-pr">10.00</h2>
+					<span>单位:500g</span>
+				</div>
+				<div class="good-num"> 
+					<span>数量</span>
+					<div class="good-numadd">
+						<input type="text" class="num-show" value="1">
+						<button class="add">+</button>
+						<button class="count">-</button>
+						
+					</div>
+				</div>	
+				
+				<div class="else-class"><p>其他规格</p></div>
+				<div class="total">
+					
+					<span>总价</span>
+					<em>20.00</em>
+					<span>元</span>
+				</div>
+				<div class="operate">
+					<a href="" id="add-cart" class="add-cart">加入购物车</a>
+					
+				</div>
+	
+			</div>
+
+		</div>	
+			<div class="tuijian">
+				<div class="img-left">
+					
+						<h3>新品推荐</h3>
+						<img src="img/123.jpg" alt="">
+						<p>葡萄</p>
+						<span>￥12.12</span>
+				
+				</div>
+				<div class="img-right">
+					<ul class="detail">
+						<li>商品介绍</li>
+						<li>评论</li>
+					</ul>
+					<div class="tab-content">
+						<span>商品详情</span>
+					</div>
+				</div>
+				
+			</div>
+				
+	
+		
+		</section>
+		<footer>
+			
+		</footer>
+		
+		
+	</body>
+</html>
+<script src="js/new_file.js"></script>
+<script >
+	$(function(){
+		$("header").load("header.html");
+		
+	});
+	
+	$(function(){
+		$("footer").load("footer.html");
+		
+	});
+</script>
+<script src="js/mf.js"></script>
+<script>
+	let oSmallBox = document.querySelector("#small-box");
+	let oBigBox = document.querySelector("#big-box");
+	let oMask = document.querySelector("#mask");
+	
+	let mf = new MF(oSmallBox,oBigBox,oMask);
+	
+	mf.eventBind();
+</script>
+<script>
+	function huoqu(){
+		
+		let a = location.href;
+		console.log(a);
+		let a1 = a.indexOf("?");
+		if(a1 == -1){
+			return "";
+		}
+		let b =a.substring(a1 + 1);
+		let b1 = b.split("&");
+		let c = new Object;
+		for(let i in b1){
+			let b2 = b1[i].split("=");
+			c[b2[0]] = b2[1];
+		}
+		return c;
+	}
+	
+	let z = huoqu();
+	console.log(z);
+	if(z!=""){
+		z1 = z["id"];
+		$.ajax({
+			typr:"post",
+			url:"xiangqing.php",
+			data:"id" +z1,
+			success:function(a){
+				console.log(a);
+				ccc(a);
+				
+			}
+			
+		})
+		
+	}
+	
+	function ccc(a){
+		let a1 = a.split('[');
+		let a2 = a1[1].split(']');
+		let a3 = a2[0];
+		let b = JSON.parse(a3);
+		$(".goods-name").html(b.name);
+		$(".good-price").html(b.fuistid);
+		let img = b.url.split("=");
+	
+	
+	
+	}
+</script>
+
+

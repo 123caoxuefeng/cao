@@ -1,0 +1,344 @@
+/* 顶部的布局 */
+*{
+	margin:0;
+	padding:0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+img{
+	vertical-align:top ;
+}
+
+body{
+	width:100%;
+	/* overflow: hidden; */
+}
+
+
+.goods-big{
+	border-bottom: 2px solid #39a93e;
+	width:100%;
+}
+.good-class{
+	width:1200px;
+	height:40px;
+	margin:0 auto;
+	
+}
+.good-list{
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	background-color: #39a93e;
+	float: left;
+}
+.good-class ul {
+	float:left;
+	font-weight: 400;
+	line-height: 40px;
+	margin-left:30px;
+}
+
+.good-class a{
+	color: #666;
+	font-size: 14px;
+}
+.good-class a:hover{
+	color:#FF8800;
+}
+.good-class span{
+	margin:0 15px;
+	color:#666;
+	font-size: 14px;
+}
+#banner{
+	width: 1200px;
+	height: 270px;
+	margin: 0 auto;
+}
+#banner .banner-left{
+	width: 198px;
+	height: 270px;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+	float: left;
+	color:#666;
+}
+#banner .banner-left li{
+	height: 44px;
+	border-bottom: 1px solid #eee;
+	background: url(../img/jingling.png) 178px -257px no-repeat #fff;
+	color:#666;
+}
+#banner .banner-left li a{
+	display: block;
+	height: 44px;
+	line-height: 44px;
+	text-indent: 71px;
+	font-size: 14px;
+	color: #333;	
+}
+.fiurt{
+	background: url(../img/jingling.png) 28px 0px no-repeat;
+}
+.seafood{
+	background: url(../img/jingling.png) 28px -44px no-repeat;
+}
+.meet{
+	background: url(../img/jingling.png) 28px -88px no-repeat;
+}
+.egg{
+	background: url(../img/jingling.png) 28px -132px no-repeat;
+}
+.vegetables{
+	background: url(../img/jingling.png) 28px -176px no-repeat;
+	}
+.ice{
+	background: url(../img/jingling.png) 28px -220px no-repeat;
+}	
+/* 轮播图区域 */
+
+.slide{
+	width: 760px;
+	height: 270px;
+	position: relative;
+	overflow: hidden;
+	float: left;
+}
+.slide-pics{
+	position: relative;
+	height:270px;
+	width:760px;
+	left:0;
+	top:0;
+}
+.slide-pics a{
+	height:270px;
+	width:760px;
+	display: inline-block;
+	position:absolute;
+	float:left;
+}
+.first-pic img{
+	z-index: 10;
+}
+.slide-pics a img{
+	height:270px;
+	width:760px;
+	position:absolute;
+}
+ .btn-pre{
+	height:40px;
+	width:50px;
+	position: absolute;
+	top:45%;
+	left:15px;
+	z-index:20 ;
+	background: url(../img/jingling.png) 0px -388px no-repeat
+	
+
+}
+.btn-next{
+	height:40px;
+	width:30px;
+	position: absolute;
+	top:45%;
+	z-index:20 ;
+	right:5px;
+	background: url(../img/jingling.png) 0px -423px no-repeat ;
+	}
+
+
+.items{
+	height:15px;
+	width:100px;
+	position: absolute;
+	left:350px;
+	top:250px;
+	text-align: center;
+	z-index:20 ;
+}
+
+.slide-pics li{
+	height:11px;
+	width:11px;
+	border-radius: 50%;
+	background-color: #37AB40;
+	float: left;
+	margin-left:8px;
+	line-height: 15px;
+	z-index:20 ;
+}
+.banner-right a img{
+	display: block;
+}
+.list-model{
+	height:340px;
+	width:1200px;
+	margin:15px auto 0;
+}
+
+.list-title{
+	height:40px;
+	border-bottom:2px solid #42ad46;
+		
+}
+.list-title h3{
+	height:40px;
+	line-height: 40px;
+	font-size: 16px;
+	color:#37ab40;
+	font-weight: bold;
+	float:left;
+}
+.list-title .list-title1{
+	float:left;
+	
+}
+.goods-more{
+	float: right;
+	line-height: 40px;
+}
+.list-title1{
+	height: 20px;
+	line-height:20px ;
+	margin-top:15px;
+	float:left;
+}
+.list-title1 span{
+	color:#666;
+	margin:0 10px 0 20px;
+	font-size:12px;
+}
+.list-title1 a{
+	color:#666;
+	margin:0 5px;
+	font-size: 12px;
+}
+.goods-more{
+	height:20px;
+	margin-top:6px;
+	color:#666;
+	font-size: 12px;
+}
+.goods-more:hover{
+	color:orange;
+}
+.goods-fiust{
+	height:300px;
+	
+}
+.goods-fiust1{
+	width:200px;
+	height:300px;
+	float:left;
+}
+.goods-list{
+	width:1000px;
+	height:299px;
+	border-bottom:1px solid  #ededed;
+	float: left;
+}
+.goods-list li{
+	height:299px;
+	width:249px;
+	border-right:1px solid  #ededed;
+	float: left;
+}
+.goods-list li h4{
+	width:200px;
+	height:50px;
+	margin:20px auto 0;
+	text-align: center;
+}
+.goods-list li h4 a{
+	font-size: 14px;
+	color:#666;
+	font-weight: normal;
+	line-height: 24px;
+}
+.goods-list li img{
+	display: block;
+	width:180px;
+	height:180px;
+	margin:0 auto;
+}
+.goods-list li .price{
+	text-align: center;
+	font-size: 20px;
+	color:#c40000;
+	margin-top:5px;
+}
+.goods-list li:hover{
+	width: 248px;
+	height: 297px;
+	border: 1px solid gold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

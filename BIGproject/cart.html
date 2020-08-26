@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/footer.css"/>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			li{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+			}
+			img{
+				vertical-align:top ;
+			}
+			header{
+				background-color:#f7f7f7 ;
+			}
+			#top-first{
+				height:29px;
+				width:1276px;
+				background-color: #f7f7f7;
+				margin:0 auto;	
+				border-bottom: 1px solid #dddddd;
+			}
+			#top-first1{
+				
+				height:29px;
+				width:1200px;
+				margin:0 auto;	
+				display: flex;
+				justify-content: space-between;
+				text-align: center;
+			}
+			#top-left{
+				height:29px;
+				line-height: 29px;
+				font-size: 12px;
+				color:#666;
+			}
+			#top-right{
+				height:29px;
+				line-height: 29px;
+				font-size:12px;
+				color:#666;
+			}
+			#top-right span{
+			
+				color:#cecece;
+				margin:0 10px;
+			}
+			#top-right a:hover{
+				color:#ff8800;
+			}
+			.search-bar{
+				width:1200px;
+				height:115px;
+				margin:0 auto;
+			}
+			.logo-fl{
+				width:150px;
+				height:59px;
+				margin:29px 0 0 17px;
+				float: left;
+			}
+			.sub-name{
+				font-size: 18px;
+				color:#666;
+				margin:50px 0 0 20px;
+				float: left;
+			}
+			.search-right{
+				width:616px;
+				height:38px;
+				border: 1px solid #37AB40;
+				margin:34px 0 0 124px;
+				background: url(img/jingling.png) 10px -338px no-repeat;
+				float: left;
+				color: #fff;
+			}
+			.input-btn{
+				width:470px;
+				height:34px;
+				border:0;
+				margin:2px 0 0 36px;
+				outline: none;
+				font-size: 12px;
+				color: #737272;
+				float: left;
+			}
+			.input-right{
+				width:100px;
+				height:38px;
+				background-color: #37AB40;
+				border: 0;
+				font-size: 14px;
+				color:#fff;
+				outline: none;
+				cursor: pointer;
+				float: right;
+				text-align: center;
+			}
+			
+			.total-count{
+				width:1200px;
+				margin:0 auto ;
+				height:40px;
+				line-height: 40px;
+				font-size: 14px;
+			}
+			.total-count span{
+				font-size: 16px;
+				color:#ff4200;
+				margin:0 5px;
+			}
+			.cart-list{
+				width:1198px;
+				border:1px solid #ddd;
+				background-color: #f7f7f7;
+				margin:0 auto;
+				height:40px;
+			}
+			.cart-list li{
+				height:40px;
+				line-height: 40px;
+				float: left;
+				text-align: center;
+			}
+			.cart-list .cont1{
+				width:20%;
+			}
+			.cart-list .cont2{
+				width:16%;
+			}
+			.cart-list .cont3{
+				width:16%;
+			}
+			.cart-list .cont4{
+				width:12%;
+			}
+			.cart-list .cont5{
+				width:15%;
+			}
+			.cart-list .cont6{
+				width:18%;
+			}
+			.sett{
+				width:1198px;
+				height:78px;
+				border: 1px solid #ddd;
+				background-color: #fff4e8;
+				margin:-1px auto 0;
+			}
+			.sett li{
+				/* line-height: 78px; */
+				float: left;
+			}
+			.col01{
+				width:4%;
+				text-align: center;
+				float: left;
+				line-height: 78px;
+			}
+			.col02{
+				width:12%;
+				line-height: 78px;
+			}
+			.col03{
+				width:69%;
+				text-align:right ;
+				height:48px;
+				line-height: 28px;
+				margin-top:10px;
+				float: right;
+			}
+			.col03 em{
+				color:#ff0000;
+				font-weight: bold;
+				font-style: normal;
+			}
+			form ul:nth-child(1){
+				height:120px;
+				
+			}
+			.col03 span{
+				color:#ff3d3d;
+				font-size: 22px;
+				
+			}
+			.col03 b{
+				color:#ff0000;
+				font-size: 14px;
+				padding:0 5px;
+			}
+			.col04{
+				width:14%;
+				text-align: center;
+				float: right;
+				line-height: 78px;
+			}
+			.cart-list-td{
+				width:1198px;
+				border: 1px solid #ddd;
+				background-color: #edfff9;
+				margin:0 auto;
+				margin-top: -1px;
+				
+			}
+			.cart-list-td li{
+				height:120px;
+				line-height: 120px;
+				float: left;
+				text-align: center;
+			}
+			.cl1{
+				height:120px;
+				line-height: 120px;
+				float: left;
+				text-align: center;
+			}
+			.cl2{
+				width:12%;
+				
+			}
+			.cl2 img{
+				width:100px;
+				height:100px;
+				border: 1px solid #ddd;
+				display: block;
+				/* margin:10px auto 0; */
+				margin:10px 0  0  30px;
+			}
+			.cl3{
+				width:10%;
+				height:48px;
+				text-align: left;
+				line-height: 24px;
+				/* margin-top:38px; */
+				font-size: 12px;
+				color:#666;
+			}
+			.cl4{
+				width:16%;
+			}
+			.cl5{
+				width:13%;
+			}
+			.cl6{
+				width:12%;
+			}
+			.num-add{
+				width:98px;
+				height:28px;
+				border:1px solid #ddd;
+				margin:40px auto 0;
+			}
+			.add-f{
+				width:29px;
+				height:28px;
+				line-height: 28px;
+				background-color: #f3f3f3;
+				font-size: 14px;
+				color:#666;
+				float: left;
+			}
+			.cut-f{
+				    width: 29px;
+				    height: 28px;
+				    line-height: 28px;
+				    background-color: #f3f3f3;
+				    font-size: 14px;
+				    color: #666;
+					float: left;
+			}
+			
+			.num-show{
+				width:38px;
+				height:28px;
+				text-align: center;
+				line-height: 30px;
+				border: 0;
+				display: block;
+				float: left;
+				outline: none;
+			}
+			.cl7{
+				width:15%;
+			}
+			.cl8{
+				width:18%;
+			}
+			.cl8 a{
+				color:#666;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<header>
+			<div id="top-first1">
+				<div id="top-left">
+					欢迎来到天天生鲜
+				</div>
+				<div id="top-right">
+					<a href="login.html" target="_blank" >登录</a>
+					<span>|</span>
+					<a href="register.html" target="_blank" >注册</a>
+					<span>|</span>
+					<a href="">用户中心</a>
+					<span>|</span>
+					<a href="" target="_blank" >我的购物车</a>
+					<span>|</span>
+					<a href="">我的订单</a>
+				</div>
+			</div>	
+		</header>
+		<div class="search-bar">
+			<a href="first.html" class="logo-fl">
+				<img src="img/logo.png" alt="">
+			</a>
+			<div class="sub-name">|     购物车</div>
+			<div class="search-right">
+				<input type="text" placeholder="搜索商品" class="input-btn">
+				<input type="text"  class="input-right" value="搜索">
+			</div>
+		</div>
+		<div class="total-count">
+			全部商品<span>0</span>件
+			
+		</div>
+			<ul class="cart-list">
+				<li class="cont1">商品名称</li>
+				<li class="cont2">商品单位</li>
+				<li class="cont3">商品单价</li>
+				<li class="cont4">数量</li>
+				<li class="cont5">小计</li>
+				<li class="cont6">操作</li>
+			</ul>
+			
+			<form action="" method="post">
+				<ul class="cart-list-td">
+					<li class="cl1">
+						<input type="checkbox" name="good-id" checked>
+					</li>
+					<li class="cl2">
+						<img src="" alt="">
+					</li>
+					<li class="cl3">
+						<em>20.00元/500g</em>
+					</li>
+					<li class="cl4">500g</li>
+					<li class="cl5">20.00</li>
+					<li class="cl6">
+						<div class="num-add">
+							<a href="javascript:;" class="add-f">+</a>
+							<input type="text" class="num-show"value="1" sku_id="1">
+							<a href="javascript:;" class="cut-f">-</a>
+						</div>
+					</li>
+					<li class="cl7">20</li>
+					<li class="cl8">
+						<a href="#">删除</a>
+					</li>
+				</ul>
+				
+				
+				
+				<ul class="sett">
+					<input type="hidden"  name="waretoken" value="123456">
+					<li class="col01">
+						<input type="checkbox" name="" checked="">
+					</li>
+					<li class="col02">
+						全选
+					</li>
+					<li class="col03">合计(不含运费):<em>￥</em>
+						<span>0</span>
+						<br>
+						共计
+						<b>0</b>件商品
+					</li>
+					<li class="col04">
+						<input type="submit" value="赶快买它">
+					</li>
+					
+				</ul>
+
+			</form>
+		<footer></footer>
+	</body>
+</html>
+<script src="js/new_file.js"></script>
+<script src="js/getcart.js"></script>
+<script>
+
+	$(function(){
+	$("footer").load("footer.html");	
+	});
+</script>

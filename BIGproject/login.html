@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="css/footer.css">
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			a{
+				text-decoration: none;
+			}
+			.login-top{
+				width:960px;
+				height:130px;
+				margin:0 auto;
+				
+			}
+			.login-logo img{
+				margin-top:30px;
+			}
+			.login-bgimg{
+				height:480px;
+				background-color: #518e17;
+			}
+			.login-center{
+				height:480px;
+				width:960px;
+				margin:0 auto;
+				overflow: hidden;
+			}
+			.bg-banner{
+				width:381px;
+				height:322px;
+				background:url(img/login/2.png) no-repeat ;
+				margin-top:90px;
+				float: left;
+			}
+			.title{
+				width:40px;
+				height:300px;
+				font-size: 30px;
+				color:#f0f9e8;
+				text-align: center;
+				line-height: 36px;
+				margin:80px 0 0 120px;
+				float: left;
+			}
+			.login-form{
+				width:368px;
+				height:378px;
+				border:1px solid #fff;
+				margin-top:50px;
+				float:right;
+				background-color:#fff;
+			}
+			.login-title{
+				height:60px;
+				width:308px;
+				margin:10px auto;
+				border-bottom:1px solid #e0e0e0;
+			}
+			.form-input{
+				width:308px;
+				height:250px;
+				margin:20px auto;
+				position: relative;
+			}
+			.login-title h1{
+				font-size: 24px;	
+				color:#a8a8a8;
+				float: left;
+				font-weight: bold;
+				margin-left:44px;
+				line-height: 60px;
+			}
+			.login-title a{
+				height:20px;
+				width:100px;
+				display: block;
+				font-size: 16px;
+				color:#5fb42a;
+				text-indent: 26px;
+				/* 这个是首行缩进的意思 */
+				background: url(img/login/1.png) left 5px no-repeat;
+				float:left;
+				margin:20px 0 0 36px;
+				
+			}
+			.name-input{
+				height:36px;
+				width:306px;
+				border:1px solid #e0e0e0;
+				background:url(img/login/1.png) 280px -41px no-repeat #f8f8f8;
+				outline: none;
+				font-size: 14px;
+				text-indent: 10px;
+				position: absolute;
+				left:0;
+				top:0;
+			}
+			.pass-input{
+				height:36px;
+				width:306px;
+				border:1px solid #e0e0e0;
+				background:url(img/login/1.png) 280px -94px no-repeat #f8f8f8;
+				outline: none;
+				font-size: 14px;
+				text-indent: 10px;
+				position: absolute;
+				left:0;
+				top:80px;
+				
+			}
+			.more-input{
+				position: absolute;
+				left:0;
+				top:149px;
+				width:100%;
+			}
+			.more-input input{
+				float: left;
+				margin-top:2px;
+			}
+			.more-input  label{
+				float: left;
+				margin-left: 10px;
+			}
+			.more-input a{
+				float: right;
+				color:#666;
+			}
+			.input-submit{
+				width:100%;
+				height:40px;
+				position: absolute;
+				left:0;
+				top:180px;
+				background-color: #47aa34;
+				color:#fff;
+				font-size: 22px;
+				border:0px;
+				font-family: "microsoft yahei";
+				cursor:pointer;
+			}
+			.span-error{
+				position: absolute;
+				top:46px;
+				display: none;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="login-top">
+			<a href="" class="login-logo"><img src="img/login/3.png" alt=""></a>
+		</div>
+		
+		<div class="login-bgimg" >
+			<div class="login-center">
+				<div class="bg-banner"></div>
+				<div class="title">日夜兼程 . 急速送达</div>
+				<div class="login-form">
+					<div class="login-title">
+						<h1>用户登录</h1>
+						<a href="register.html">立即注册</a>
+					</div>
+					<div class="form-input">
+						<form action="login.php" method="post">
+							<input type="text" class="name-input" name="username"  placeholder="请输入用户名">
+							<span class="span-error">不能为空</span>
+							<input type="password" class="pass-input" name="pwd" placeholder="请输入密码">
+							<div class="more-input">
+								<input type="checkbox" name="remeber">
+								<label for="">记住用户名</label>
+								<a href="">忘记密码</a>
+							</div>
+							<input type="submit" class="input-submit" name="" value="登录" id="submit">
+						</form>
+						
+					</div>
+					
+				</div>
+			</div>
+			
+			
+		</div>
+	
+		<footer>
+			
+			
+		</footer>
+		
+	</body>
+</html>
+<script src="js/new_file.js"></script>
+<script>
+
+	$(function(){
+	$("footer").load("footer.html");	
+	});
+</script>
+<script src="js/new_file.js"></script>
+<script>
+	let name = false;
+	let pwd = false;
+	$(".name-input").blur(function(){
+		let usname =$(".name-input").val().lenght;
+		console.log($(".name-input"));
+		if(usname ==null || usname ==""){
+			name = false;
+			 $(".span-error").css({display:"block"});
+		}else{
+			name= true;
+			 $(".span-error").css({display:"none"});
+		}
+	});
+	$(".pass-input").blur(function(){
+		let uspwd =$(".pass-input").val().lenght
+		
+		if(uspwd ==null || uspwd ==""){
+			 pwd= false;
+		}else{
+			pwd = true;
+		}
+		
+	});
+	
+$("#submit").submit(function(){
+	if(name == true||pwd == true){
+		return true;
+	}else{
+	return false;	
+	}
+});
+</script>

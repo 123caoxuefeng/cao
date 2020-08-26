@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="css/footer.css">
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			a{
+				text-decoration: none;
+			}
+			li{
+				list-style: none;
+			}
+			.big-cnter{
+				height:560px;
+				width:702px;
+				margin:50px auto 0;
+				/* background-color: #37AB40; */
+				overflow: hidden;
+			}
+			.center-left{
+				width:300px;
+				height:475px;
+				/* background-color: red; */
+				float: left;
+			}
+			.center-left a{
+				width:200px;
+				height:76px;
+				float: right;
+				margin-right:30px;
+			}
+			.center-left p{
+				width:300px;
+				height:30px;
+				float: right;
+				text-align: right;
+				font-size: 24px;
+				color:#69a81e;
+				margin:20px 30px 0 0;
+			}
+			.center-right{
+				width:401px;
+				float: right;
+				border-left:1px solid  #666;
+			}
+			.reg-title{
+				width:360px;
+				margin:0 auto;
+				height:50px;
+				float: left;
+				margin-left:30px;
+				border-bottom:1px solid #e0e0e0;
+			}
+			.reg-title h1{
+				float:left;
+				height:50px;
+				line-height: 50px;
+				font-size: 24px;
+				color:#a8a8a8;
+				font-weight: bold;
+			}
+			.reg-title a{
+				height:20px;
+				float: right;
+				line-height:20px;
+				font-size: 16px;
+				color:#5fb42a;
+				padding-right: 20px;
+				background: url("img/register/1.png") 36px 4px no-repeat;
+				margin-top:15px;
+			}
+			.reg-form{
+				width:360px;
+				margin:30px 0 0 30px ;
+				float: left;
+				position: relative;
+			}
+			.reg-form li{
+				height:70px;
+				width:360px;
+				
+			}
+			.reg-form li input{
+				height:38px;
+				width:288px;
+				border:1px solid #e0e0e0;
+				float: left;
+				outline: none;
+				text-indent:10px ;
+				background-color: #f8f8f8;
+			}
+			.reg-form li label{
+				width:70px;
+				height:40px;
+				line-height: 40px;
+				float: left;
+				font-size: 14px;
+				color:#a8a8a8;
+			}
+			.agreen{
+				height:15px;
+				width:15px;
+				float: left;
+			}
+			.agrenn-span{
+				height:40px;
+				width:300px;
+				float: left;
+				margin-left:15px;
+				line-height: 14px;
+				color: #A8A8A8;
+			}
+			#submit{
+				height:40px;
+				width:360px;
+				background-color: #47AA34;
+				outline:none;
+				border:none;
+				cursor: pointer;
+			}
+			.check-span{
+				float: left;
+				height:20px;
+				/* margin-bottom: 10px; */
+			}
+		</style>
+	</head>
+	<body>
+		<div class="big-cnter">
+			<div class="center-left">
+				<a href=""><img src="./img/register/2.png" alt=""></a>
+				<p>足不出户 · 新鲜每一天</p>
+				<div class="reg-banner"><img src="./img/register/3.png" alt=""></div>
+			</div>
+			
+			<div class="center-right">
+				<div class="reg-title">
+					<h1>用户注册</h1>
+					<a href="login.html">登录</a>
+				</div>
+				<div class="reg-form">
+					<form action="register.php" method="post">
+						<ul>
+							<li><label for="">用户名:</label><input type="text" id="user-name" name="usersname">
+								<span class="first-span"></span>
+							</li>
+							
+							<li><label for="">密码:</label> <input type="password" id="pwd" name="pwd">
+								<span></span>
+							</li>
+							
+							
+							<li><label for="">确认密码:</label> <input type="password" id="cpwd" name="cpwd">
+								<span></span>
+							</li>
+							
+							
+							<li><label for="">邮箱:</label> <input type="text" id="email" name="email">
+							<span></span>
+							</li>
+							
+					
+						<input type="checkbox"  class="agreen" checked="=checked">
+						<span class="agrenn-span">同意"天天生鲜用户使用协议"</span>
+						<span class="check-span"></span>
+						</ul>
+						
+						<input type="submit" id="submit" value="注册">
+						
+					</form>
+					
+				
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		<footer>
+			
+		</footer>
+		
+	</body>
+</html>
+<script src="js/new_file.js"></script>
+<script>
+	let name1 = false;
+	let pwd = false;
+	let cpwdd = false;
+	let email2 = false;
+	let agerrn2=false;
+	// 用户名验证
+	$("#user-name").blur(function(){
+		let name = $("#user-name").val().length;
+		if(name == null || name==""){
+			$(".first-span").html("*请输入用户名");
+			$(".first-span").css({color:"red"});
+			name1 = false;
+		}else if(name<5 || name>20){
+			$(".first-span").html("请输入5-20个字符的用户名");
+			$(".first-span").css({color:"red"});
+			name1 = false;
+		}else{
+			name1 = true;
+			$(".first-span").html("");
+		}
+		
+	});
+	// 密码的验证
+	$("#pwd").blur(function(){
+		let pwd1 = $("#pwd").val();
+		let ze = /^[a-z0-9_-]{8,20}$/;
+		if(ze.test(pwd1)){
+			pwd=true;
+			$("#pwd").next().html("");
+		}else{
+			$("#pwd").next().html("密码最少8位，最长20位");
+			$("#pwd").next().css({color:"red"});
+			 pwd = false;
+		}
+	});
+	
+	// 确认密码的验证
+	$("#cpwd").blur(function(){
+		let cpwd =$("#cpwd").val();
+		let spwd1=$("#pwd").val();
+		
+		if(cpwd==null || spwd1=="" ){
+			$("#cpwd").next().html("密码不能为空");
+			$("#cpwd").next().css({color:"red"});
+			cpwdd = false;
+		}else if(cpwd != spwd1){
+			$("#cpwd").next().html("密码不一致");
+			$("#cpwd").next().css({color:"red"});
+			cpwdd =false;
+		}else{
+			cpwdd =true;
+		}
+	});
+	
+	// 邮箱的验证
+	$("#email").blur(function(){
+		let em = $("#email").val();
+		let zem =  /^[a-z0-9][\w\.\-]*@[a-z0-9\-]+(\.[a-z]{2,5}){1,2}$/;
+		if(zem.test(em)){
+			email2 =true;
+		}else{
+			email2 =false;
+			 $("#email").next().html("邮箱格式不正确");
+			  $("#email").next().css({color:"red"});
+		}
+		
+	});
+	// agreen 点击同意的验证agerrn2
+	$(".agreen").click(function(){
+		if($(this).is(":checked")){
+			agerrn2=true;
+			$(this).next().next().html("");
+			
+		}else{
+			$(this).next().next().html("请勾选同意");
+			agerrn2=false;
+		}
+	});
+	
+	// 注册按钮的提交submit
+	// let name1 = false;
+	// let pwd = false;
+	// let cpwdd = false;
+	// let email2 = false;
+	// let agerrn2=false;
+	$("#submit").submit(function(){
+		
+		if(name1==true&&  pwd==true&& cpwdd== true&&email2 ==true&& agerrn2==true ){
+			return true;
+		 // window.location.href = "login.html";
+
+		}else{
+			return false;
+			
+		}	
+	});
+	
+</script>
+<script src="js/new_file.js"></script>
+<script>
+	$(function(){
+		$("footer").load("footer.html");
+	});
+	
+	
+</script>
