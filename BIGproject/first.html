@@ -103,29 +103,29 @@
 				<h4>
 					<a href="" class="mingzi">草莓 500g</a>
 				</h4>
-				<a href="xiangqing.html?funum=1"><img src="img/126.jpg" alt=""  id="1"></a>			
-				<div class="price">￥ 10:00</div>
+				<a href="xiangqing.html"><img src="img/126.jpg" alt=""  id="1"></a>			
+				<div class="price"> 10:00</div>
 			</li>
 			<li>
 				<h4>
 					<a href="">葡萄</a>
 				</h4>
-				<a href="xiangqing.html?funum=2"><img src="img/123.jpg" alt=""  id="2"></a>			
-				<div class="price">￥ 20:00</div>
+				<a href="xiangqing.html"><img src="img/123.jpg" alt=""  id="2"></a>			
+				<div class="price">20:00</div>
 			</li>
 			<li>
 				<h4>
 					<a href="">奇异果</a>
 				</h4>
 				<a href="xiangqing.html?funum=3"><img src="img/124.jpg" alt=""  id="3"></a>			
-				<div class="price">￥ 12:12</div>
+				<div class="price">12:12</div>
 			</li>
 			<li>
 				<h4>
 					<a href="">柠檬</a>
 				</h4>
 				<a href="xiangqing.html?funum=4"><img src="img/125.jpg" alt=""  id="4"></a>			
-				<div class="price">￥32:00</div>
+				<div class="price">32:00</div>
 			</li>
 		</ul>
 		</div>
@@ -468,8 +468,8 @@
 					url:"xiangqing.php",
 					data:"funum="+idd+"&fuistid="+qqq+"&name="+www+"&img="+$(this).attr("src"),		 
 					 success:function(resText){
-						console.log(resText)
-						// $(location).prop('href', 'xiangqing.html')
+				console.log(resText)
+						$(location).prop('href', 'xiangqing.html')
 		
 						}
 					})

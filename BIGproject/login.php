@@ -14,7 +14,6 @@ if(mysql_num_rows($result)==1){
 	echo "登陆失败";
 	
 }
-
 mysql_close($conn);
 
 ?>

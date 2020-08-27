@@ -1,0 +1,175 @@
+*{
+    margin:0;
+    padding:0;
+}
+h1,h2,h3,h4,h5,h6{
+    font-size:16px;
+    font-weight:normal;
+}
+ol,ul,li{
+    list-style:none;
+}
+a,u{
+    text-decoration: none;
+}
+/* header   */
+#header{
+    width:100%;
+    height:103px;
+    background:#000;
+}
+.header-con{
+    width:1257px;
+    height:103px;
+    margin:0 auto;
+}
+.header-con img{
+    width:214px;
+    height:55px;
+    margin:26px 0px 0px 516px;
+} 
+/* nav  */
+.shop {
+    padding: 0 50px;
+}
+
+.shop-happy {
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.shop-logo {
+    height: 70px;
+
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    /* display: inline-block; */
+    float: left;
+    line-height: 70px;
+}
+
+.shop-alt {
+    font-size: 14px;
+    float: right;
+    line-height: 70px;
+    margin-left: 900px;
+}
+
+.shop-price {
+    font-size: 18px;
+    color: gray;
+    margin-left: 10px;
+}
+
+.shop-order {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    background-color: #666;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+}
+
+.shop-thead {
+    font-size: 12px;
+    border-top: 1px solid #ccc;
+    padding: 15px 20px;
+}
+
+.shop-row {
+    width: 100%;
+    text-align: left;
+    display: table;
+
+}
+
+.shop-row li {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.col-checkbox {
+    width: 5%;
+}
+
+.checkall {
+    /* -webkit-appearance: none; */
+    border: 1px solid #9b9b9b;
+    border-radius: 0;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.col-produce-img {
+    width: 6%;
+}
+
+.col-produce-name {
+    width: 20%;
+}
+
+.col-produce-price {
+    width: 12%;
+}
+
+.col-produce-num {
+    width: 14%;
+}
+
+.col-produce-total {
+    width: 14%;
+    font-weight:600;
+}
+
+.col-operate {
+    width: 8%;
+}
+
+.shop-goods{
+    /* width:100%; */
+    height:100px;
+    border:1px solid #ccc;
+    padding:50px 30px;
+}
+.goods-pro{
+    display: inline-block;
+    margin-left:20px;
+}
+.goods-img{
+    width:100px;
+    height:100px;
+}
+.goods-p{
+    display: inline-block;
+    margin-left:30px;
+}
+.goods-tit{
+    font-size:16px;
+}
+.goods-size{
+    font-size:12px;
+    color:#ccc;
+    margin-top:20px;
+}
+.goods-unit{
+    display: inline-block;
+    margin-left:150px;
+}
+.goods-change{
+    display: inline-block;
+    margin-left:100px;
+}
+.goods-total{
+    display: inline-block;
+    margin-left:120px;
+    font-weight: 700;
+    color:indianred;
+}
+.goods-delete{
+    margin-left:130px;
+}

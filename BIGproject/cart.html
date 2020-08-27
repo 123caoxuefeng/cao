@@ -330,7 +330,7 @@
 			</div>
 		</div>
 		<div class="total-count">
-			全部商品<span>0</span>件
+			全部商品<span class="conghe">0</span>件
 			
 		</div>
 			<ul class="cart-list">
@@ -342,13 +342,13 @@
 				<li class="cont6">操作</li>
 			</ul>
 			
-			<form action="" method="post">
-				<ul class="cart-list-td">
+			<form action="" method="post" class="fath">
+				<!-- <ul class="cart-list-td">
 					<li class="cl1">
 						<input type="checkbox" name="good-id" checked>
 					</li>
 					<li class="cl2">
-						<img src="" alt="">
+						<img src="img/126.jpg" alt="">
 					</li>
 					<li class="cl3">
 						<em>20.00元/500g</em>
@@ -366,7 +366,7 @@
 					<li class="cl8">
 						<a href="#">删除</a>
 					</li>
-				</ul>
+				</ul> -->
 				
 				
 				
@@ -392,13 +392,83 @@
 
 			</form>
 		<footer></footer>
+		<h6 id="666"></h6>
 	</body>
 </html>
 <script src="js/new_file.js"></script>
-<script src="js/getcart.js"></script>
+
 <script>
 
 	$(function(){
 	$("footer").load("footer.html");	
 	});
 </script>
+<script>
+	
+	$.ajax({
+		
+		type:"post",
+		url:"shanchu.php",
+		success:function(restext){
+		console.log(restext);	
+		fun(restext);
+		fun1();
+		}
+		
+	})
+	
+	function fun(restext){
+		// let arr = JSON.parse(restext);	
+		// $("#666").html(restext);
+		let a = restext.split("?");	
+		let a1 = a[0];
+	
+		let arr = JSON.parse(a1);
+			// console.log(arr[2].fuistid);
+			// arr[2].fuistid;
+			for(let index in arr ){
+				console.log(arr[index]);
+				
+			}
+			
+	for(let i=0;i<arr.length;i++){
+	
+	let oul = document.createElement("ul");
+	oul.innerHTML= `<ul class="cart-list-td">
+					<li class="cl1">
+						<input type="checkbox" name="good-id" checked>
+					</li>
+					<li class="cl2">
+						<img src="" alt="" class="bgc-img">
+					</li>
+					<li class="cl3">
+						<em></em>
+					</li>
+					<li class="cl4"></li>
+					<li class="cl5"></li>
+					<li class="cl6">
+						<div class="num-add">
+							<a href="javascript:;" class="add-f">+</a>
+							<input type="text" class="num-show"value="1" sku_id="1">
+							<a href="javascript:;" class="cut-f">-</a>
+						</div>
+					</li>
+					<li class="cl7">20</li>
+					<li class="cl8">
+						<a href="javascript:;">删除</a>
+					</li>
+				</ul>`	
+		
+		$(".fath").append(oul);
+		// let qq = JSON.parse(arr[i])
+		// console.log(arr[i].name);
+		$(".cl5").eq(i).html(arr[i].fuistid);
+		// console.log($(".cl5").eq(i));
+		// console.log(arr[i].fuistid);
+		$(".bgc-img").eq(i).attr("src",arr[i].url);
+		console.log($(".bgc-img"));
+	}				
+	}
+	
+</script>
+<script src="js/getcart.js"></script>

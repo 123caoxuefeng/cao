@@ -6,10 +6,12 @@ $url = $_REQUEST["img"];
 $iddd = $_REQUEST["funum"];
 $conn = mysql_connect("localhost","root","root");
 mysql_select_db("cao");
+ echo mysql_error();
 $result =mysql_query("select * from list where name='$name'",$conn);
 if(mysql_num_rows($result) ==1){
-	echo "<script>(\"window.location.href='xiangqing.html'\");</script>";
+	 echo 1;
 }else{
+	
 	 mysql_query("insert into list (name,fuistid,url,funum) values('$name','$id','$url','$iddd')",$conn);
 }
 
